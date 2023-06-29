@@ -1,0 +1,17 @@
+.form{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.flexbox{
+    display:flex;
+    justify-content: space-between;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.date{
+    font-size: 12px;
+}
+.gallery {
+    justify-content: center;
+  }
