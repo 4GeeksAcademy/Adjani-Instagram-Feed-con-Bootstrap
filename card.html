@@ -1,82 +1,171 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Instagram Feed con Bootstrap</title>
-    </head>
-    <body>
-        <a href="card.html">
-            <button type="button" class="nav-link" id="nav-single-tab" data-bs-toggle="tab" data-bs-target="#nav-single"  role="tab" aria-controls="nav-single" aria-selected="false" >
-                <i class="fa-solid fa-square"></i>
-            </button>
-        </a> 
-        <div class="container" >
-            <div class="row col-12 m-3 gallery">
-                <div class="card" style="width: 25rem;">
-                    <section class="flexbox">
-                        <div class="title">
-                            <h5>My mountains</h5>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid nav">
+            <a class="navbar-brand align-items-center" href="#">
+                <i class="fa-brands fa-instagram mr-1" style="color: #000000"></i>
+                <span class="color text-dark">Instagram</span>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-end">
+                <button type="button" class="btn btn-success nav-link mr-5" data-toggle="modal"
+                    data-target="#ModalCenter">
+                    <span>Create a new post</span>
+                </button>
+
+                <div class="modal fade" id="ModalCenter" tabindex="0" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-upper">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLongTitle">Create a new post</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body ">
+                                <div class="form">
+                                    <label for="formCaption">
+                                        <h6>Caption:</h6>
+                                    </label>
+                                    <textarea class="form-control" id="formCaption" rows="2"
+                                        placeholder="Add the caption of your post here"></textarea>
+                                </div>
+                                <button type="button" class="camera btn btn-light">
+                                    <i class="fa-solid fa-camera" style="color: #000000;"></i>
+                                </button>
+                                <button type="button" class="location btn btn-light">
+                                    <i class="fa-sharp fa-solid fa-location-dot" style="color: #0a0000;"></i>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
                         </div>
-                        <div class="date">
-                            <p>12/14</p>
-                        </div>
-                    </section>
-                    <img class="card-img-top" src="https://fastly.picsum.photos/id/353/200/300.jpg?hmac=dp_gN1fPfq1NcUZmNjRXfOwD3UH0D4B8A-jwvjByOyc" alt="Card1">
-                    <div class="card-body">
-                      <h6 class="card-title">204 Likes</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                        <a class="navbar-brand align-items-center text-white" href="#">
+                            <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                        </a>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Accesibility</a>
+                        <a class="dropdown-item" href="#">Privacy and data</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">Log out</a>
                     </div>
                 </div>
             </div>
-            <div class="row col-12 m-3 gallery">
-                <div class="card" style="width: 25rem;">
-                    <section class="flexbox">
-                        <div class="title">
-                            <h5>Froggy</h5>
-                        </div>
-                        <div class="date">
-                            <p>01/09</p>
-                        </div>
-                    </section>
-                    <img class="card-img-top" src="https://fastly.picsum.photos/id/935/400/300.jpg?hmac=LftEg2ViqqSFEov5aIdXpS9TO3sZcG_nlxO3J4U0Y7A" alt="Card2">
-                    <div class="card-body">
-                      <h6 class="card-title">4.600 Likes</h6>
-                      <p class="card-text">Just a little froggy.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row col-12 m-3 gallery">
-                <div class="card" style="width: 25rem;">
-                    <section class="flexbox">
-                        <div class="title">
-                            <h5>My Baby</h5>
-                        </div>
-                        <div class="date">
-                            <p>23/05</p>
-                        </div>
-                    </section>
-                    <img class="card-img-top" src="https://fastly.picsum.photos/id/659/400/300.jpg?hmac=5npFwftd2SgZ3b8TBqu342Tf1R4lTwLeqB4JbCjFmYs" alt="Card2">
-                    <div class="card-body">
-                      <h6 class="card-title">5.000 Likes</h6>
-                      <p class="card-text">Just there waiting for me.</p>
-                    </div>
-                </div>
-            </div>                 
         </div>
+    </nav>
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+            <a href="index.html">
+                <button type="button" class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" role="tab" aria-controls="nav-grid" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </a>
+            <a href="card.html">
+                <button type="button" class="nav-link" id="nav-single-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-single" role="tab" aria-controls="nav-single" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row col-12 m-3 gallery">
+            <div class="card" style="width: 25rem;">
+                <section class="flexbox">
+                    <div class="title">
+                        <h5>My mountains</h5>
+                    </div>
+                    <div class="date">
+                        <p>12/14</p>
+                    </div>
+                </section>
+                <img class="card-img-top"
+                    src="https://fastly.picsum.photos/id/353/200/300.jpg?hmac=dp_gN1fPfq1NcUZmNjRXfOwD3UH0D4B8A-jwvjByOyc"
+                    alt="Card1">
+                <div class="card-body">
+                    <h6 class="card-title">204 Likes</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 m-3 gallery">
+            <div class="card" style="width: 25rem;">
+                <section class="flexbox">
+                    <div class="title">
+                        <h5>Froggy</h5>
+                    </div>
+                    <div class="date">
+                        <p>01/09</p>
+                    </div>
+                </section>
+                <img class="card-img-top"
+                    src="https://fastly.picsum.photos/id/935/400/300.jpg?hmac=LftEg2ViqqSFEov5aIdXpS9TO3sZcG_nlxO3J4U0Y7A"
+                    alt="Card2">
+                <div class="card-body">
+                    <h6 class="card-title">4.600 Likes</h6>
+                    <p class="card-text">Just a little froggy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 m-3 gallery">
+            <div class="card" style="width: 25rem;">
+                <section class="flexbox">
+                    <div class="title">
+                        <h5>My Baby</h5>
+                    </div>
+                    <div class="date">
+                        <p>23/05</p>
+                    </div>
+                </section>
+                <img class="card-img-top"
+                    src="https://fastly.picsum.photos/id/659/400/300.jpg?hmac=5npFwftd2SgZ3b8TBqu342Tf1R4lTwLeqB4JbCjFmYs"
+                    alt="Card2">
+                <div class="card-body">
+                    <h6 class="card-title">5.000 Likes</h6>
+                    <p class="card-text">Just there waiting for me.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </body>
+</body>
 
 
 
 
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
